@@ -1,0 +1,178 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#4f46e5,#2563eb,#06b6d4);
+    padding:30px;
+}
+
+.container{
+    width:800px;
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(15px);
+    border-radius:20px;
+    padding:40px;
+    box-shadow:0 10px 30px rgba(0,0,0,.3);
+    color:white;
+}
+
+h1{
+    text-align:center;
+    font-size:40px;
+    margin-bottom:10px;
+}
+
+.subtitle{
+    text-align:center;
+    color:#e5e7eb;
+    margin-bottom:30px;
+}
+
+.input-group{
+    display:flex;
+    gap:15px;
+}
+
+input{
+    flex:1;
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+    outline:none;
+}
+
+button{
+    padding:15px 30px;
+    border:none;
+    border-radius:10px;
+    background:#10b981;
+    color:white;
+    cursor:pointer;
+    font-size:16px;
+    transition:.3s;
+}
+
+button:hover{
+    background:#059669;
+    transform:translateY(-2px);
+}
+
+button:disabled{
+    opacity:.7;
+    cursor:not-allowed;
+}
+
+#result{
+    margin-top:35px;
+}
+
+.loading{
+    text-align:center;
+    font-size:22px;
+    margin-top:20px;
+}
+
+.report-title{
+    text-align:center;
+    margin-bottom:25px;
+    font-size:28px;
+}
+
+.metric{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(255,255,255,.12);
+    margin-bottom:15px;
+    padding:15px 20px;
+    border-radius:12px;
+}
+
+.metric strong{
+    font-size:17px;
+}
+
+.metric span{
+    max-width:55%;
+    text-align:right;
+    word-break:break-word;
+}
+
+.score{
+    text-align:center;
+    font-size:28px;
+    font-weight:bold;
+    margin-bottom:25px;
+    color:#FCD34D;
+}
+
+.status-success{
+    color:#22c55e;
+    font-weight:bold;
+}
+
+.status-error{
+    color:#ef4444;
+    font-weight:bold;
+}
+
+.error{
+    background:#ef4444;
+    color:white;
+    padding:15px;
+    border-radius:10px;
+    text-align:center;
+}
+
+@media(max-width:768px){
+
+.container{
+    width:100%;
+}
+
+.input-group{
+    flex-direction:column;
+}
+
+button{
+    width:100%;
+}
+
+.metric{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:10px;
+}
+
+.metric span{
+    max-width:100%;
+    text-align:left;
+}
+}
+footer{
+    position:fixed;
+    bottom:15px;
+    width:100%;
+    text-align:center;
+    color:white;
+    font-size:15px;
+}
+
+footer a{
+    color:#FCD34D;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+footer a:hover{
+    text-decoration:underline;
+}
